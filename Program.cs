@@ -59,7 +59,7 @@
 // int[] array = new int[n];
 // int max = 0;
 // for (int i = 0; i < array.Length; i++)
-//    array[i] = new Random().Next(3, 1001);
+//    array[i] = new Random().Next(3, 1000);
 // Console.WriteLine("Всего кустов: " + n + ", количество ягод на каждом: " + string.Join(", ", array));
 // for (int c = 1; c < n - 1; c++)
 // {

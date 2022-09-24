@@ -1,77 +1,45 @@
-﻿// // Доп задачка из 1-го дз
+﻿// // Задача 19
 
 // Console.Clear();
-// Console.Write("Введите выборку чисел поочередно, для завершения ввода - введите 0: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// int max = 0;
-// int preMax = 0;
-// while (a != 0)
-// {
-//    Console.Write("Введите число: ");
-//    a = Convert.ToInt32(Console.ReadLine());
-//    if (a > max)
-//    {
-//       preMax = max;
-//       max = a;
-//    }
-//    else if (a > preMax) preMax = a;
-// }
-// Console.Write("Самое большое число: " + max + ", ");
-// Console.Write("Второе по величине число: " + preMax);
+// Console.Write("Введите 5-ти значное число: ");
+// string a = Convert.ToString(Console.ReadLine());
+// if (a[0] != a[4] && a[1] != a[3])
+//    Console.Write("Не палиндром");
+// else Console.Write("Палиндром");
 
 
-// // Задача 10
+// // Задача 21
 
 // Console.Clear();
-// string a = Convert.ToString(new Random().Next(100, 1000));
-// Console.WriteLine(a);
-// Console.Write(a[1]);
+// Console.Write("Введите первую координату X: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите первую координату Y: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите первую координату Z: ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите вторую координату X: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите вторую координату Y: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите вторую координату Z: ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// double s = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1));
+// Console.Write(s);
 
 
-// // Задача 13 
-
-// Console.Clear();
-// string a = Convert.ToString(new Random().Next());
-// if (Convert.ToInt32(a) % 100 >= 0)
-// {
-//    Convert.ToString(a);
-//    Console.WriteLine("Третья цифра: " + a[2]);
-// }
-// else Console.WriteLine("3-ей цифры нет");
-// Console.WriteLine("Зарандомленное число: " + a);
-
-
-// // Задача 15
-
-// Console.Clear();
-// Console.Write("Введите цифру дня недели: ");
-// int s = Convert.ToInt32(Console.ReadLine());
-// if (s == 6 || s == 7) Console.Write("Выходной");
-// else Console.Write("Работаем пока");
-
-// // Доп задачка из дз 2
-
-// // Верное решение, которое, предположительно, ожидалось после разговора в тг
+// // Задача 23
 
 // Console.Clear();
-// Console.Write("Введите число кустов от 3 до 1000: ");
+// Console.Write("Введите число: ");
 // int n = Convert.ToInt32(Console.ReadLine());
-// int[] array = new int[n];
-// int max = 0;
-// for (int i = 0; i < array.Length; i++)
-//    array[i] = new Random().Next(3, 1001);
-// Console.WriteLine("Всего кустов: " + n + ", количество ягод на каждом: " + string.Join(", ", array));
-// for (int c = 1; c < n - 1; c++)
+// int x = 0;
+// for (int i = 1; i <= n; i++)
 // {
-//    int sum = array[c] + array[c + 1] + array[c - 1];
-//    if (sum > max) max = sum;
+//    x = i * i * i;
+//    if (i < n)
+//    {
+//       Console.Write(x + ", ");
+//    }
+//    else Console.Write(x + ".");
 // }
-// Console.Write("Максимальное количество ягод, которое сборщик может собрать: " + max);
-
-// // Но по условиям задачи в целом могло бы подойти, наверное, и вот это, т.к. указано "... На i-ом кусте растет a(i) ягод", т.е. от номера куста зависит количество ягод на нем, но это было бы слишком просто, полагаю:)
-
-// Console.Clear();
-// int a = Convert.ToInt32(new Random().Next(3, 1000));
-// int sum = a + (a + 1) + (a - 1);
-// Console.WriteLine("Один собирающий модуль соберет: " + sum + " ягод");
-// Console.Write("На кусте, на котором стоит собирающий модуль: " + a + " ягод");

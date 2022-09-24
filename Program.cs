@@ -3,9 +3,9 @@
 // Console.Clear();
 // Console.Write("Введите 5-ти значное число: ");
 // string a = Convert.ToString(Console.ReadLine());
-// if (a[0] != a[4] && a[1] != a[3])
-//    Console.Write("Не палиндром");
-// else Console.Write("Палиндром");
+// if (a[0] == a[4] && a[1] == a[3])
+//    Console.Write("Палиндром");
+// else Console.Write("Не палиндром");
 
 
 // // Задача 21

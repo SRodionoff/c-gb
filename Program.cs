@@ -1,45 +1,94 @@
-﻿// // Задача 19
-
-// Console.Clear();
-// Console.Write("Введите 5-ти значное число: ");
-// string a = Convert.ToString(Console.ReadLine());
-// if (a[0] == a[4] && a[1] == a[3])
-//    Console.Write("Палиндром");
-// else Console.Write("Не палиндром");
-
-
-// // Задача 21
-
-// Console.Clear();
-// Console.Write("Введите первую координату X: ");
-// int x1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите первую координату Y: ");
-// int y1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите первую координату Z: ");
-// int z1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите вторую координату X: ");
-// int x2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите вторую координату Y: ");
-// int y2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите вторую координату Z: ");
-// int z2 = Convert.ToInt32(Console.ReadLine());
-
-// double s = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1));
-// Console.Write(s);
-
-
-// // Задача 23
+﻿// // Задача 25
 
 // Console.Clear();
 // Console.Write("Введите число: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int x = 0;
-// for (int i = 1; i <= n; i++)
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите возводимую степень: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// int deg = 1;
+// for (int i = 1; i <= b; i++)
 // {
-//    x = i * i * i;
-//    if (i < n)
-//    {
-//       Console.Write(x + ", ");
-//    }
-//    else Console.Write(x + ".");
+//    deg = deg * a;
 // }
+// Console.Write(deg);
+
+
+// // Задача 27
+
+// Console.Clear();
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// int lastNum = 0;
+// while (a != 0)
+// {
+//    lastNum = a % 10;
+//    a = a / 10;
+//    sum = lastNum + sum;
+// }
+// Console.Write(sum);
+
+// // Задача 29
+
+// Console.Clear();
+// int[] arr = new int[8];
+// for (int i = 0; i < arr.Length; i++)
+// {
+//    Console.Write("Введите " + (i + 1) + "-е число: ");
+//    int a = Convert.ToInt32(Console.ReadLine());
+//    arr[i] = a;
+// }
+// Console.WriteLine("[" + string.Join(", ", arr) + "]");
+
+
+// // Доп. задача 1
+
+// Console.Clear();
+// Console.Write("Введите свой рост: ");
+// int height = Convert.ToInt32(Console.ReadLine());
+// int higherThan = 0;
+// int[] classHeight = new int[20];
+// for (int i = 0; i < classHeight.Length; i++)
+// {
+//    classHeight[i] = new Random().Next(150, 201);
+// }
+// Array.Sort(classHeight);
+// for (int j = 0; j < classHeight.Length; j++)
+// {
+//    if (classHeight[j] < height)
+//       higherThan++;
+// }
+// Console.WriteLine("Пересчет шпал: [" + string.Join(", ", classHeight) + "]");
+// Console.WriteLine("Встань " + (higherThan + 1) + "-ым");
+
+
+// // Доп. задача 2
+
+// Console.Clear();
+// Console.Write("Введите положительное или отрицательное число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arrToSort = new int[10];
+// for (int i = 0; i < arrToSort.Length; i++)
+// {
+//    arrToSort[i] = new Random().Next(1, 101);
+// }
+// Console.WriteLine("Изначальный массив: [" + string.Join(", ", arrToSort) + "]");
+// for (int j = 0; j < arrToSort.Length - 2; j++)
+// {
+//    arrToSort[arrToSort.Length - 1] = arrToSort[1];
+//    arrToSort[arrToSort.Length - 2] = arrToSort[0];
+//    arrToSort[1] = arrToSort[arrToSort.Length - 1];
+//    arrToSort[0] = arrToSort[arrToSort.Length - 2];
+//    if (n < 0)
+//    {
+//       arrToSort[j] = arrToSort[j + 2];
+//    }
+
+//    // else
+//    // {
+//    //    arrToSort[arrToSort.Length - 1] = arrToSort[0];
+//    //    arrToSort[arrToSort.Length - 2] = arrToSort[arrToSort.Length - 1];
+//    //    arrToSort[arrToSort.Length - 3] = arrToSort[arrToSort.Length - 2];
+//    // }
+// }
+// Console.WriteLine("Массив со сдвигом: [" + string.Join(", ", arrToSort) + "]");

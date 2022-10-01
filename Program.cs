@@ -1,94 +1,112 @@
-﻿// // Задача 25
+﻿// // Задача 34
 
 // Console.Clear();
-// Console.Write("Введите число: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите возводимую степень: ");
-// int b = Convert.ToInt32(Console.ReadLine());
-// int deg = 1;
-// for (int i = 1; i <= b; i++)
+// Console.Write("Кол-во элем-ов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arr = new int[n];
+// int count = 0;
+// void inputArray(int[] arr)
 // {
-//    deg = deg * a;
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//       arr[i] = new Random().Next(100, 1000);
+//    }
+//    Console.WriteLine("Сам массив: " + string.Join(", ", arr));
 // }
-// Console.Write(deg);
-
-
-// // Задача 27
-
-// Console.Clear();
-// Console.Write("Введите число: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// int sum = 0;
-// int lastNum = 0;
-// while (a != 0)
+// void counter(int[] arr, int count)
 // {
-//    lastNum = a % 10;
-//    a = a / 10;
-//    sum = lastNum + sum;
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//       if (arr[i] % 2 == 0)
+//          count++;
+//    }
+//    Console.Write($"Четных чисел: {count}");
 // }
-// Console.Write(sum);
+// inputArray(arr);
+// counter(arr, count);
 
-// // Задача 29
+
+// // Задача 36
 
 // Console.Clear();
-// int[] arr = new int[8];
+// Console.Write("Кол-во элем-ов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arr = new int[n];
+// int count = 0;
+// void inputArray(int[] arr)
+// {
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//       arr[i] = new Random().Next(-100, 1000);
+//    }
+//    Console.WriteLine("Сам массив: " + string.Join(", ", arr));
+// }
+// void counter(int[] arr, int count)
+// {
+//    for (int i = 0; i < arr.Length; i = i + 2)
+//       count = arr[i] + count;
+//    Console.Write($"Сумма чисел, стоящих на нечетных позициях: {count}");
+// }
+// inputArray(arr);
+// counter(arr, count);
+
+
+// // Задача 38
+
+// Console.Clear();
+// Console.Write("Кол-во элем-ов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arr = new int[n];
+// int max = 0;
+// int min = 0;
+// void inputArray(int[] arr)
+// {
+
+//    for (int i = 0; i < arr.Length; i++)
+//    {
+//       arr[i] = new Random().Next(1, 100);
+//       min = arr[i];
+//       max = arr[i];
+//    }
+//    Console.WriteLine("Сам массив: " + string.Join(", ", arr));
+// }
+// inputArray(arr);
+// for (int j = 0; j < arr.Length; j++)
+// {
+//    if (arr[j] > max) max = arr[j];
+//    else if (arr[j] < min) min = arr[j];
+// }
+// int count = max - min;
+// Console.WriteLine($"Максимальное: {max}");
+// Console.WriteLine($"Минимальное: {min}");
+// Console.WriteLine($"Разница максимального и минимального чисел: {count}");
+
+
+// // Доп. задачка
+
+// Console.Clear();
+// int prime = 0;
+// int primeCounter = 0;
+// int[] arr = new int[3];
 // for (int i = 0; i < arr.Length; i++)
 // {
 //    Console.Write("Введите " + (i + 1) + "-е число: ");
 //    int a = Convert.ToInt32(Console.ReadLine());
 //    arr[i] = a;
 // }
-// Console.WriteLine("[" + string.Join(", ", arr) + "]");
-
-
-// // Доп. задача 1
-
-// Console.Clear();
-// Console.Write("Введите свой рост: ");
-// int height = Convert.ToInt32(Console.ReadLine());
-// int higherThan = 0;
-// int[] classHeight = new int[20];
-// for (int i = 0; i < classHeight.Length; i++)
+// Console.WriteLine("Введенные числа: [" + string.Join(", ", arr) + "]");
+// void isPrime(int[] arr, int prime, int primeCounter)
 // {
-//    classHeight[i] = new Random().Next(150, 201);
-// }
-// Array.Sort(classHeight);
-// for (int j = 0; j < classHeight.Length; j++)
-// {
-//    if (classHeight[j] < height)
-//       higherThan++;
-// }
-// Console.WriteLine("Пересчет шпал: [" + string.Join(", ", classHeight) + "]");
-// Console.WriteLine("Встань " + (higherThan + 1) + "-ым");
-
-
-// // Доп. задача 2
-
-// Console.Clear();
-// Console.Write("Введите положительное или отрицательное число: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-// int[] arrToSort = new int[10];
-// for (int i = 0; i < arrToSort.Length; i++)
-// {
-//    arrToSort[i] = new Random().Next(1, 101);
-// }
-// Console.WriteLine("Изначальный массив: [" + string.Join(", ", arrToSort) + "]");
-// for (int j = 0; j < arrToSort.Length - 2; j++)
-// {
-//    arrToSort[arrToSort.Length - 1] = arrToSort[1];
-//    arrToSort[arrToSort.Length - 2] = arrToSort[0];
-//    arrToSort[1] = arrToSort[arrToSort.Length - 1];
-//    arrToSort[0] = arrToSort[arrToSort.Length - 2];
-//    if (n < 0)
+//    for (int i = 0; i < arr.Length; i++)
 //    {
-//       arrToSort[j] = arrToSort[j + 2];
+//       for (int j = 2; j < arr[i]; j++)
+//          if (arr[i] % j != 0)
+//          {
+//             prime = arr[i];
+//          }
+//          else Console.Write("Простых чисел нет");
+//       primeCounter = prime + primeCounter;
 //    }
-
-//    // else
-//    // {
-//    //    arrToSort[arrToSort.Length - 1] = arrToSort[0];
-//    //    arrToSort[arrToSort.Length - 2] = arrToSort[arrToSort.Length - 1];
-//    //    arrToSort[arrToSort.Length - 3] = arrToSort[arrToSort.Length - 2];
-//    // }
+//    Console.Write($"Сумма простых чисел: {primeCounter}");
 // }
-// Console.WriteLine("Массив со сдвигом: [" + string.Join(", ", arrToSort) + "]");
+// isPrime(arr, prime, primeCounter);

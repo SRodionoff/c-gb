@@ -97,7 +97,7 @@
 //    arr[i] = a;
 //    void isPrime(int a)
 //    {
-//       for (int j = 2; j < a;)
+//       for (int j = 2; j < a; j++)
 //       {
 //          if (arr[i] % j == 0)
 //             break;

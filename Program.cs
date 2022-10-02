@@ -43,7 +43,7 @@
 // }
 // void counter(int[] arr, int count)
 // {
-//    for (int i = 0; i < arr.Length; i = i + 2)
+//    for (int i = 1; i < arr.Length; i = i + 2)
 //       count = arr[i] + count;
 //    Console.Write($"Сумма чисел, стоящих на нечетных позициях: {count}");
 // }

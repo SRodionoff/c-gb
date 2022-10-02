@@ -87,26 +87,32 @@
 // Console.Clear();
 // int prime = 0;
 // int primeCounter = 0;
-// int[] arr = new int[3];
+// Console.Write("Введите количество чисел: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arr = new int[n];
 // for (int i = 0; i < arr.Length; i++)
 // {
-//    Console.Write("Введите " + (i + 1) + "-е число: ");
+//    Console.Write($"Введите {(i + 1)}-е число: ");
 //    int a = Convert.ToInt32(Console.ReadLine());
 //    arr[i] = a;
-// }
-// Console.WriteLine("Введенные числа: [" + string.Join(", ", arr) + "]");
-// void isPrime(int[] arr, int prime, int primeCounter)
-// {
-//    for (int i = 0; i < arr.Length; i++)
+//    void isPrime(int a)
 //    {
-//       for (int j = 2; j < arr[i]; j++)
-//          if (arr[i] % j != 0)
+//       for (int j = 2; j < a;)
+//       {
+//          if (arr[i] % j == 0)
+//             break;
+//          else if (arr[i] == 2 || arr[i] == 3 || arr[i] % j != 0)
 //          {
 //             prime = arr[i];
 //          }
-//          else Console.Write("Простых чисел нет");
-//       primeCounter = prime + primeCounter;
+//          primeCounter = prime + primeCounter;
+//          return;
+//       }
 //    }
-//    Console.Write($"Сумма простых чисел: {primeCounter}");
+//    isPrime(a);
 // }
-// isPrime(arr, prime, primeCounter);
+// if (primeCounter == 0)
+//    Console.WriteLine("Нет простых чисел");
+// else
+//    Console.WriteLine($"Сумма простых чисел: {primeCounter}");
+// Console.WriteLine("Введенные числа: [" + string.Join(", ", arr) + "]");

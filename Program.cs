@@ -1,33 +1,96 @@
-// // Задача 41
+// // Задача 47
 
 // Console.Clear();
-// Console.Write("Введите количество чисел: ");
+// Console.Write("Введите кол-во строк: ");
 // int n = Convert.ToInt32(Console.ReadLine());
-// int pos = 0;
-// for (int i = 0; i < n; i++)
+// Console.Write("Введите кол-во столбцов: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// double[,] matrix = new double[n, m];
+// Console.Write("Введите диапазон чисел (от): ");
+// int from = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите диапазон чисел (до): ");
+// int to = Convert.ToInt32(Console.ReadLine());
+
+// void inputMatrix(double[,] matrix)
 // {
-//    Console.Write($"Введите {(i + 1)}-е число: ");
-//    int a = Convert.ToInt32(Console.ReadLine());
-//    if (a > 0)
-//       pos++;
+//    for (int i = 0; i < matrix.GetLength(0); i++)
+//    {
+//       for (int j = 0; j < matrix.GetLength(1); j++)
+//       {
+//          matrix[i, j] = Math.Round(new Random().NextDouble() * (to - from) + from, 1);
+//          Console.Write(matrix[i, j] + " \t");
+//       }
+//       Console.WriteLine();
+//    }
 // }
-// Console.Write($"Количество положительных чисел: {pos}");
+// inputMatrix(matrix);
 
 
-// // // Задача 43
+// // Задача 50
+
+// Console.Clear();
+// Console.Write("Введите кол-во строк: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите кол-во столбцов: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите номер строки: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите номер столбца: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = new int[n, m];
+// int elem = 0;
+// void inputMatrix(int[,] matrix)
+// {
+//    for (int i = 0; i < matrix.GetLength(0); i++)
+//    {
+//       for (int j = 0; j < matrix.GetLength(1); j++)
+//       {
+//          matrix[i, j] = new Random().Next(-100, 101);
+//          Console.Write(matrix[i, j] + " \t");
+//       }
+//       Console.WriteLine();
+//    }
+//    if (c <= n && x <= m)
+//    {
+//       elem = matrix[(c - 1), (x - 1)];
+//       Console.WriteLine($"Указанный элемент равен: {elem}");
+//    }
+//    else Console.WriteLine("Нет такого элемента");
+// }
+// inputMatrix(matrix);
+
+
+// // Задача 52
 
 
 // Console.Clear();
-// Console.Write("Введите B1: ");
-// double b1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите K1: ");
-// double k1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите B2: ");
-// double b2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите K2: ");
-// double k2 = Convert.ToInt32(Console.ReadLine());
-// double x = (b2 - b1) / (k1 - k2);
-// double y = k1 * x + b1;
-// if (k1 == k2) Console.Write("Не пересекутся");
-// else
-//    Console.Write($"Точка пересечения: ({x}; {y})");
+// Console.Write("Введите количество строк: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите количество столбцов: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = new int[n, m];
+// double sum = 0;
+// double avg = 0;
+// void InputMatrix(int[,] matrix)
+// {
+//    for (int i = 0; i < matrix.GetLength(0); i++)
+//    {
+//       for (int j = 0; j < matrix.GetLength(1); j++)
+//       {
+//          matrix[i, j] = new Random().Next(-10, 11);
+//          Console.Write(matrix[i, j] + "\t");
+//       }
+//       Console.WriteLine();
+//    }
+// }
+// InputMatrix(matrix);
+// for (int i = 0; i < matrix.GetLength(1); i++)
+// {
+//    sum = 0;
+//    for (int j = 0; j < matrix.GetLength(0); j++)
+//    {
+//       sum = sum + matrix[j, i];
+//    }
+//    avg = sum / n;
+//    Console.WriteLine($"Среднее арифметическое {i + 1} столбца равно: {avg}");
+// }
